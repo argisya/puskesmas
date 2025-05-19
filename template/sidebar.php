@@ -1,12 +1,11 @@
-<html >
+<html>
  <head>
   <title>
-   Fasilitas & Layanan - PusKita
+   PusKita Dashboard
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
   <style>
    body {
       font-family: 'Inter', sans-serif;
@@ -40,7 +39,7 @@
     }
   </script>
  </head>
- <body class="bg-white">
+ <body class="bg-white font-sans text-black">
   <div class="flex min-h-screen">
    <!-- Sidebar -->
     <aside class="bg-[#0078D7] w-56 flex flex-col p-6 space-y-6 text-white select-none">
@@ -55,13 +54,13 @@
      </p>
     </div>
     <nav class="flex flex-col space-y-3 text-lg font-semibold">
-     <a class="nav-link" href="index.php">
+     <a class="nav-link" href="/puskesmas/index.php">
       Beranda
      </a>
-     <a class="nav-link" href="pasien.php">
+     <a class="nav-link" href="/puskesmas/pasien/pasien.php">
       Pasien
      </a>
-     <a class="nav-link" href="dokter.php">
+     <a class="nav-link" href="/puskesmas/dokter/dokter.php">
       Dokter
      </a>
      <div class="relative">
@@ -70,15 +69,13 @@
          <i class="fas fa-chevron-down text-sm ml-2"></i>
        </button>
        <div id="dropdownMenu" class="dropdown-content hidden absolute left-0 mt-2 w-full bg-[#0078D7] rounded-md shadow-lg z-10">
-         <a href="rawat-jalan.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Rawat Jalan</a>
-         <a href="rawat-inap.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-b-md">Rawat Inap</a>
+         <a href="/puskesmas/fasilitas_layanan/fasilitas.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Fasilitas</a>
+         <a href="/puskesmas/fasilitas_layanan/rawat_jalan.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Rawat Jalan</a>
+         <a href="/puskesmas/fasilitas_layanan/rawat_inap.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-b-md">Rawat Inap</a>
        </div>
      </div>
-     <a class="nav-link" href="peraturan.php">
-      Peraturan
+     <a class="nav-link" href="/puskesmas/tata_tertib_pasien/peraturan.php">
+      Tata Tertib Pasien
      </a>
     </nav>
    </aside>
-  </div>
- </body>
-</html>
