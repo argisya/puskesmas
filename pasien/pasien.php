@@ -1,4 +1,8 @@
-<?php include_once('../template/sidebar.php') ?>
+<?php include_once('../template/sidebar.php');
+include_once('../controller/control_tambah_pasien.php'); 
+
+$get = get_data()
+?>
   <!-- Main content -->
   <main class="flex-1 p-8">
    <h2 class="text-3xl font-extrabold mb-6">
@@ -37,94 +41,32 @@
      </tr>
     </thead>
     <tbody class="text-base text-black">
-     <tr>
-      <td class="py-2 px-3">
-       Agus Mulyadi
-      </td>
-      <td class="py-2 px-3">
-       67432745
-      </td>
-      <td class="py-2 px-3">
-       Poli Umum
-      </td>
-      <td class="py-2 px-3">
-       BPJS
-      </td>
-      <td class="py-2 px-3">
-       29-05-2025
-      </td>
-      <td class="py-2 px-3">
-       Rawat Jalan
-      </td>
-     </tr>
-     <tr>
-      <td class="py-2 px-3">
-       Agus Mulyadi
-      </td>
-      <td class="py-2 px-3">
-       67432745
-      </td>
-      <td class="py-2 px-3">
-       Poli Umum
-      </td>
-      <td class="py-2 px-3">
-       BPJS
-      </td>
-      <td class="py-2 px-3">
-       29-05-2025
-      </td>
-     </tr>
-     <tr>
-      <td class="py-2 px-3">
-       Agus Mulyadi
-      </td>
-      <td class="py-2 px-3">
-       67432745
-      </td>
-      <td class="py-2 px-3">
-       Poli Umum
-      </td>
-      <td class="py-2 px-3">
-       BPJS
-      </td>
-      <td class="py-2 px-3">
-       29-05-2025
-      </td>
-     </tr>
-     <tr>
-      <td class="py-2 px-3">
-       Agus Mulyadi
-      </td>
-      <td class="py-2 px-3">
-       67432745
-      </td>
-      <td class="py-2 px-3">
-       Poli Umum
-      </td>
-      <td class="py-2 px-3">
-       BPJS
-      </td>
-      <td class="py-2 px-3">
-       29-05-2025
-      </td>
-     </tr>
-     <tr>
-      <td class="py-2 px-3">
-       Agus Mulyadi
-      </td>
-      <td class="py-2 px-3">
-       67432745
-      </td>
-      <td class="py-2 px-3">
-       Poli Umum
-      </td>
-      <td class="py-2 px-3">
-       BPJS
-      </td>
-      <td class="py-2 px-3">
-       29-05-2025
-      </td>
-     </tr>
+     <?php
+      foreach ($get as $data) {
+       ?>
+      <tr class="border-b border-gray-200 align-top">
+       <td class="py-3 px-3 leading-tight">
+        <?= $data['nama_pasien'] ?>
+       </td>
+       <td class="py-3 px-3">
+        <?= $data['no_rek_medis'] ?>
+       </td>
+       <td class="py-3 px-3">
+        <?= $data['poli'] ?>
+       </td>
+       <td class="py-3 px-3">
+        <?= $data['klmpk_pasien'] ?>
+       </td>
+       <td class="py-3 px-3">
+        <?= $data['tgl'] ?>
+       </td>
+       <td class="py-3 px-3">
+        <?= $data['layanan'] ?>
+       </td>
+      </tr>
+       <?php
+      }
+      ?>
     </tbody>
    </table>
    <div class="flex justify-center mt-12">
