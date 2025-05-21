@@ -95,5 +95,10 @@
      <a class="nav-link" href="/puskesmas/tata_tertib_pasien/peraturan.php">
       Tata Tertib Pasien
      </a>
+     <div class="pt-4 mt-4 border-t border-gray-300">
+        <a class="nav-link bg-red-600 hover:bg-red-700 text-white text-center" href="/puskesmas/controller/control_login.php?action=logout">
+          <i class="fas fa-sign-out-alt mr-2"></i>Logout
+        </a>
+     </div>
     </nav>
    </aside>

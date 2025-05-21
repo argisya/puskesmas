@@ -12,7 +12,7 @@ $get = get_data();
     </h1>
     
     <form class="mb-6">
-     <input class="w-full max-w-xs border border-gray-300 rounded-full py-2 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#0D6EFD]" placeholder="Cari data dokter" type="search"/>
+     <input class="w-full max-w-xs border border-gray-300 rounded-full py-2 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#0D6EFD]" id="searchInput" placeholder="Cari data dokter" type="search"/>
     </form>
     <table class="w-full border-collapse">
      <thead>
