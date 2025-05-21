@@ -10,7 +10,7 @@ $get = get_data()
    </h2>
    <div class="flex justify-end mb-4">
     <div class="relative w-full max-w-xs">
-     <input class="w-full border border-gray-300 rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Cari data pasien" type="text"/>
+     <input id="searchInput" class="w-full border border-gray-300 rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Cari data pasien" type="text"/>
      <span class="absolute inset-y-0 left-3 flex items-center text-gray-500">
       <i class="fas fa-search">
       </i>

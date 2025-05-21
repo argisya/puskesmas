@@ -37,6 +37,24 @@
         }
       }
     }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const tableRows = document.querySelectorAll('tbody tr');
+
+    searchInput.addEventListener('keyup', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        tableRows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            if(text.includes(searchTerm)) {
+                row.style.display = '';
+            } else {
+                row.style.display = 'none';
+            }
+        });
+    });
+});
   </script>
  </head>
  <body class="bg-white font-sans text-black">

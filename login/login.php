@@ -1,9 +1,16 @@
-<html >
+<html>
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body >
+    <?php
+        session_start();
+        if (isset($_SESSION['user'])) {
+            header("Location: index.php");
+            exit();
+        }
+    ?>
     <form action="">
         <h1>Login</h1>
         <label for="">Email</label>

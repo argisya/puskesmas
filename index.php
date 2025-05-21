@@ -1,4 +1,11 @@
-<?php include_once('template/sidebar.php') ?>
+<?php include_once('template/sidebar.php'); 
+
+        session_start();
+        if (!isset($_SESSION['user'])) {
+            header("Location: /login/login.php");
+            exit();
+        }
+?>
 
    <!-- Main content -->
    <main class="flex-1 p-6">
