@@ -83,13 +83,16 @@
      </a>
      <div class="relative">
        <button onclick="toggleDropdown()" class="dropdown-btn w-full text-left nav-link font-semibold text-white flex items-center justify-between">
-         Fasilitas & Layanan
+         Layanan
          <i class="fas fa-chevron-down text-sm ml-2"></i>
        </button>
        <div id="dropdownMenu" class="dropdown-content hidden absolute left-0 mt-2 w-full bg-[#0078D7] rounded-md shadow-lg z-10">
-         <a href="/puskesmas/fasilitas_layanan/fasilitas.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Fasilitas</a>
-         <a href="/puskesmas/fasilitas_layanan/rawat_jalan.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Rawat Jalan</a>
-         <a href="/puskesmas/fasilitas_layanan/rawat_inap.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-b-md">Rawat Inap</a>
+         <a href="/puskesmas/fasilitas_layanan/gawat_darurat.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Gawat Darurat</a>
+         <a href="/puskesmas/fasilitas_layanan/medical_check_up.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Medical Check Up</a>
+         <a href="/puskesmas/fasilitas_layanan/poliklinik.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-b-md">Poliklinik</a>
+         <a href="/puskesmas/fasilitas_layanan/laboraturium.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Laboraturium</a>
+         <a href="/puskesmas/fasilitas_layanan/perawatan.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-t-md">Perawatan Instentif</a>
+         <a href="/puskesmas/fasilitas_layanan/radiologi.php" class="block px-4 py-2 text-sm hover:bg-[#66A6FF] rounded-b-md">Radiologi</a>
        </div>
      </div>
      <a class="nav-link" href="/puskesmas/tata_tertib_pasien/peraturan.php">

@@ -21,13 +21,22 @@ $get = get_data();
         Nama
        </th>
        <th class="py-2 px-3">
-        NIP
+        Id Dokter
        </th>
        <th class="py-2 px-3">
-        Poli
+        Spesialisasi
        </th>
        <th class="py-2 px-3">
         Jadwal
+       </th>
+       <th class="py-2 px-3">
+         No Telepon
+       </th>
+       <th class="py-2 px-3">
+         Jenis Kelamin
+       </th>
+       <th class="py-2 px-3">
+         Tanggal Lahir
        </th>
       </tr>
      </thead>
@@ -40,13 +49,22 @@ $get = get_data();
         <?= $data['nama_dokter'] ?>
        </td>
        <td class="py-3 px-3">
-        <?= $data['nip'] ?>
+        <?= $data['dokter_id'] ?>
        </td>
        <td class="py-3 px-3">
-        <?= $data['poli'] ?>
+        <?= $data['nama_spesialisasi'] ?>
        </td>
        <td class="py-3 px-3">
         <?= $data['jadwal'] ?>
+       </td>
+       <td class="py-3 px-3">
+        <?= $data['no_telepon'] ?>
+       </td>
+       <td class="py-3 px-3">
+        <?= $data['jenis_kelamin'] ?>
+       </td>
+       <td class="py-3 px-3">
+        <?= $data['tanggal_lahir'] ?>
        </td>
       </tr>
        <?php

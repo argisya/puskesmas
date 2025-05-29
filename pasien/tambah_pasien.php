@@ -3,10 +3,10 @@ include_once('../controller/control_tambah_pasien.php');
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = [
         'nama_pasien' => $_POST['nama_pasien'],
-        'no_rek_medis' => $_POST['no_rek_medis'],
-        'poli' => $_POST['poli'],
-        'klmpk_pasien' => $_POST['klmpk_pasien'],
-        'tgl' => $_POST['tgl'],
+        'id_pasien' => $_POST['id_pasien'],
+        'spesialisasi_id' => $_POST['spesialisasi_id'],
+        'kelompok_pasien' => $_POST['kelompok_pasien'],
+        'tanggal_regis' => $_POST['tanggal_regis'],
         'layanan' => $_POST['layanan']
     ];
     
@@ -27,29 +27,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label for="nama" class="block text-gray-700 font-medium">
                             Nama Pasien
                         </label>
-                        <input type="text" id="nama" name="nama_pasien" required
+                        <input type="text" id="nama_pasien" name="nama_pasien" required
                             class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                     </div>
 
                     <div class="space-y-2">
-                        <label for="no_rek_medis" class="block text-gray-700 font-medium">
-                            No Rek Medis
+                        <label for="spesialisasi_id" class="block text-gray-700 font-medium">
+                            Id Pasien
                         </label>
-                        <input type="text" id="no_rek_medis" name="no_rek_medis" required
+                        <input type="text" id="spesialisasi_id" name="spesialisasi_id" required
                             class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                     </div>
 
                     <div class="space-y-2">
                         <label for="poli" class="block text-gray-700 font-medium">
-                            Pilih Poli *
+                            Pilih Spesialisasi *
                         </label>
-                        <select id="poli" name="poli" required
+                        <select id="poli" name="spesialisasi_id" required
                             class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                             <option value="">Pilih Poli</option>
-                            <option value="Umum">Poli Umum</option>
-                            <option value="Gigi">Poli Gigi</option>
-                            <option value="Anak">Poli Anak</option>
-                            <option value="Mata">Poli Mata</option>
+                            <option value="11">Poli Umum</option>
+                            <option value="12">Poli Gigi</option>
+                            <option value="14">Poli Anak</option>
+                            <option value="13">Poli Mata</option>
                         </select>
                     </div>
 
@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <label for="klmpk_pasien" class="block text-gray-700 font-medium">
                             Kelompok Pasien *
                         </label>
-                        <select id="klmpk_pasien" name="klmpk_pasien" required
+                        <select id="klmpk_pasien" name="kelompok_pasien" required
                             class="w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                             <option value="">Pilih Kelompok Pasien</option>
                             <option value="BPJS">BPJS</option>

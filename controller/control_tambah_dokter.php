@@ -3,15 +3,21 @@ function insert_data($data) {
     
 
 $nama_dokter = $_POST['nama_dokter'];
-$poli = $_POST['poli'];
-$nip = $_POST['nip'];
+$spesialisasi_id = $_POST['spesialisasi_id'];
+$dokter_id = $_POST['dokter_id'];
 $jadwal = $_POST['jadwal'];
+$no_telepon = $_POST['no_telepon'];
+$jenis_kelamin = $_POST['jenis_kelamin'];
+$tanggal_lahir = $_POST['tanggal_lahir'];
 
 $data = [
     'nama_dokter' => $nama_dokter,
-    'poli' => $poli,
-    'nip' => $nip,
-    'jadwal' => $jadwal
+    'spesialisasi_id' => $spesialisasi_id,
+    'dokter_id' => $dokter_id,
+    'jadwal' => $jadwal,
+    'no_telepon' => $no_telepon,
+    'jenis_kelamin' => $jenis_kelamin,
+    'tanggal_lahir' => $tanggal_lahir
 ];
 
 $koneksi = mysqli_connect("localhost", "root", "", "puskesmas");
@@ -19,7 +25,7 @@ if (!$koneksi) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO dokter (nama_dokter, poli, nip, jadwal) VALUES ('$nama_dokter', '$poli', '$nip', '$jadwal')";
+$sql = "INSERT INTO dokter (nama_dokter, spesialisasi_id, dokter_id, jadwal, no_telepon, jenis_kelamin, tanggal_lahir) VALUES ('$nama_dokter', '$spesialisasi_id', '$dokter_id', '$jadwal', '$no_telepon', '$jenis_kelamin', '$tanggal_lahir')";
 if (mysqli_query($koneksi, $sql)) {
     echo "<script>alert('Data dokter berhasil ditambahkan!'); window.location.href='/puskesmas/dokter/dokter.php';</script>";
 } else {
@@ -35,7 +41,7 @@ function get_data() {
     if (!$koneksi) {
         die("Koneksi gagal: " . mysqli_connect_error());
     }
-    $sql = "SELECT * FROM dokter";
+    $sql = "SELECT dokter.*, spesialisasi.nama_spesialisasi FROM dokter JOIN spesialisasi ON dokter.spesialisasi_id = spesialisasi.spesialisasi_id";
     $result = mysqli_query($koneksi, $sql);
     $data = [];
     if (mysqli_num_rows($result) > 0) {

@@ -49,16 +49,16 @@ $get = get_data()
         <?= $data['nama_pasien'] ?>
        </td>
        <td class="py-3 px-3">
-        <?= $data['no_rek_medis'] ?>
+        <?= $data['pasien_id'] ?>
        </td>
        <td class="py-3 px-3">
-        <?= $data['poli'] ?>
+        <?= $data['nama_spesialisasi'] ?>
        </td>
        <td class="py-3 px-3">
-        <?= $data['klmpk_pasien'] ?>
+        <?= $data['kelompok_pasien'] ?>
        </td>
        <td class="py-3 px-3">
-        <?= $data['tgl'] ?>
+        <?= $data['tanggal_regis'] ?>
        </td>
        <td class="py-3 px-3">
         <?= $data['layanan'] ?>
